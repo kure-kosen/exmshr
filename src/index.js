@@ -15,7 +15,7 @@ Vue.component("greeting", require("./components/Greeting.vue"));
 // Pages
 
 const Welcomes = {
-	index: require("./pages/welcomes/index.vue")
+	index: require("./pages/index.vue")
 };
 
 // Routing
