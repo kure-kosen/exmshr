@@ -1,6 +1,10 @@
 const Vue = require("vue");
 const VueRouter = require("vue-router").default;
+import Vuetify from 'vuetify';
+import VuetifyCss from '../node_modules/vuetify/dist/vuetify.min.css';
 Vue.use(VueRouter);
+Vue.use(Vuetify);
+Vue.use(VuetifyCss);
 
 const App = Vue.extend(require("./App.vue"));
 
