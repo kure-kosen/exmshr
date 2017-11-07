@@ -12,10 +12,10 @@
 Enjoy developing !!!
 
 ## Issueのこなし方
-masterブランチから"issue/*issue番号*"ブランチを作る
-issueのラベルにDoingをつける
-"WIP Issue/*issue番号* *issueタイトル*"でPR作る
-    @taira120をassignする
-    内容はissueの内容のコピー
-    チェックボックスごとにcommitする
-    全部終わったら"@taira120"ってコメントつけて
+1. masterブランチから"issue/*issue番号*"ブランチを作る   
+2. issueのラベルにDoingをつける  
+3. "WIP Issue/*issue番号* *issueタイトル*"でPR作る  
+    @taira120をassignする  
+    内容はissueの内容のコピー  
+    チェックボックスごとにcommitする  
+    全部終わったら"@taira120"ってコメントつけて  
