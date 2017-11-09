@@ -16,7 +16,7 @@ const Fetch = require("./utilities/Fetch")
 // Components
 
 import Index from './pages/index.vue'
-
+import Search from './pages/search.vue'
 // Routing
 
 const router = new VueRouter({
@@ -24,6 +24,11 @@ const router = new VueRouter({
     {
       path: '/',
       component: Index
+    },
+    {  
+      path: '/search',
+      component: Search
+
     }
   ]
 })
