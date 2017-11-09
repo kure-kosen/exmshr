@@ -17,13 +17,17 @@ const Fetch = require("./utilities/Fetch")
 
 import Index from './pages/index.vue'
 
-// Routing
+import Post from './pages/post.vue'
 
 const router = new VueRouter({
   routes: [
     {
       path: '/',
       component: Index
+    },
+    {
+      path: '/post',
+      component: Post
     }
   ]
 })
