@@ -16,15 +16,49 @@
         style="min-height: 0;"
         grid-list-lg
         >
-         <v-btn fab dark small color="primary">
-           <v-icon dark>fa-remove</v-icon>
-         </v-btn>
+	  <div id="app">
+	    <div v-if="!image">
+	      <h2>Select an image</h2>
+	      <input type="file" @change="onFileChange">
+	    </div>
+	    <div v-else>
+	      <img :src="image" />
+	      <button @click="removeImage">Remove image</button>
+	    </div>
+	  </div>
       </v-container>
     </main>
   </div>
 </template>
 
 <script>
+  var app = new Vue({
+      el: '#app',
+      data: {
+        image: ''
+      },
+      methods: {
+        onFileChange: function(e){
+	  var files = e.target.files || e.dataTransfer.files;
+	  if (!files.length) {
+	    return;
+	  }
+	  this.createImage(files[0]);
+	},
+	createImage(file) {
+	  var image = new Image();
+	  var reader = new FileReader();
+	  var vm = this;
+	  reader.onload = function(e) {
+	    vm.image = e.target.result;
+	  };
+	  reader.readAsDataURL(file);
+	},
+	removeImage: function(e) {
+	  this.image = '';
+	}
+      },
+  });
 export default {
   data: () => ({
     drawer: true
