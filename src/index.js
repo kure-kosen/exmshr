@@ -19,6 +19,10 @@ import Index from './pages/index.vue'
 
 import Post from './pages/post.vue'
 
+import Upload from './components/Upload.vue'
+
+Vue.component('upload', Upload)
+
 const router = new VueRouter({
   routes: [
     {
