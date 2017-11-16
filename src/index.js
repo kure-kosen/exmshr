@@ -17,10 +17,16 @@ const Fetch = require("./utilities/Fetch")
 
 import Index from './pages/index.vue'
 
+import Detail from './pages/detail.vue'
 // Routing
 
 const router = new VueRouter({
   routes: [
+
+    {	  
+		  path:'/detail',
+		  component:Detail
+    },
     {
       path: '/',
       component: Index
