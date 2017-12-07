@@ -27,7 +27,8 @@
         <v-flex xs3 v-for="i in 3" :key="i">
       
         </v-flex> 
-         <v-btn color="search">検索</v-btn>
+         <div id="search">
+         <v-btn v-on:click="search">SEARCH</v-btn></div>
         </v-layout>
              
       </v-container>
@@ -39,18 +40,28 @@
 export default {
   data: () => ({
     drawer: true,
-    dropdown_font1: ['bando', '坂東', '微積', '物理'],
+    dropdown_font1: ['aaaa', '坂東', '微積', '物理'],
     dropdown_font2: ['１年','２年','３年','4年','5年'],
     dropdown_font3: ['前期中間','前期期末','後期中間','学年末'],
 
   }),
+  methods: {
+    search: function (event) {
+      this.$router.push('/')
+    },
+    back_to_index:function(event){
+     router.push('/')
+    }
+  },
+
   props: {
     source: String
   }
 }
+ 
 </script>
 
-<style lang="stylus">
+<style lang="stylus>
 .group
     display: flex
     flex: 1
