@@ -1,12 +1,13 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Vuetify from 'vuetify'
+import axios from 'axios'
 import './stylus/main.styl'
 import 'font-awesome-webpack'
 
 Vue.use(VueRouter)
 Vue.use(Vuetify)
-
+Vue.use(axios)
 // const App = Vue.extend(require("./App.vue"))
 
 const Fetch = require("./utilities/Fetch")

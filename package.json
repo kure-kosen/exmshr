@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/potato4d/vue-dev-template#readme",
   "dependencies": {
+    "axios": "^0.17.1",
     "vue": "^2.4.4",
     "vuetify": "^0.16.9"
   },

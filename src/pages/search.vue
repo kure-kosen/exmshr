@@ -47,7 +47,14 @@ export default {
   }),
   methods: {
     search: function (event) {
-      this.$router.push('/')
+      //this.$router.push('/')
+     this.$axios.get('http://google.com')
+       .then(function (response) {
+       console.log(response);
+      })
+       .catch(function (error) {
+    console.log(error);
+  });
     },
     back_to_index:function(event){
      router.push('/')
