@@ -1,10 +1,12 @@
 <template>
 	<div>
 		<div v-if="!image">
-			<h2>Select an image</h2>
-			    <input type="file" v-on:change="fileSelected">
-			<v-btn color="primary" >
-			</v-btn>
+			<h2>画像を選択してください</h2>
+			<label>
+                        <i class="fa fa-plus fa-3x fa-skyblue" aria-hidden="true"></i>
+			<input type="file" style="display:none;"v-on:change="fileSelected">
+			</label>
+
 		</div>
 		<div v-else>
 			<img :src="image" />
@@ -15,6 +17,7 @@
 	</div>
 </template>
 <style>
+	.fa-skyblue {color: skyblue}
 </style>
 <script>
 	module.exports=({
