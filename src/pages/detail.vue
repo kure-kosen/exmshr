@@ -1,16 +1,40 @@
 <template>
-	<div style="text-align: center">
-		<img border="0" src="https://dummyimage.com/600x400/000/fff" width="600" height="400" >
-	</div>
-		
-
-
+<div>	
+	<img src="https://placehold.jp/400x600.png" content="width=device-width">	
+	<v-tabs fixed centered>
+		<v-tabs-bar class="cyan" dark>
+			<v-tabs-slider class="yellow"></v-tabs-slider>
+			<v-tabs-item 
+				v-for="i in items"
+				:key="i"
+				:href="'#tab-' + i"
+			>
+			{{ i }}
+			</v-tabs-item>
+		</v-tabs-bar>
+		<v-tabs-items>
+			<v-tabs-content
+				v-for="i in items"
+				:key="i"
+				:id="'tab-' + i"
+			>
+				<v-card flat>
+					<v-card-text>{{text}}</v-card-text>
+				</v-card>
+			</v-tabs-content>
+		</v-tabs-items>
+	</v-tabs>
+</div>
 </template>
 <style>
-.center {
-	text-align: center; 
-	}
-
 </style>
 <script>
+	export default {           
+	data () {                         
+		return {                                 
+			items: ['Item One', 'Item Seventeen', 'Item Five'],                                 
+			text: ''                                 
+			}                         
+		}                 
+	}
 </script>
