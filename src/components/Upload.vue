@@ -1,11 +1,13 @@
 <template>
 	<div>
 		<div v-if="!image">
-			<h2>画像を選択してください</h2>
-			<label>
-                        <i class="fa fa-plus fa-3x fa-skyblue" aria-hidden="true"></i>
-			<input type="file" style="display:none;"v-on:change="fileSelected">
-			</label>
+			<h2>select the image</h2>
+			<div class="add">
+				<label id="addlabel">
+				<i class="fa fa-plus fa-3x fa-skyblue" aria-hidden="true"></i>
+				<input type="file" style="display:none;"v-on:change="fileSelected">
+				</label>
+			</div>
 
 		</div>
 		<div v-else>
@@ -17,7 +19,11 @@
 	</div>
 </template>
 <style>
-	.fa-skyblue {color: skyblue}
+	.fa-skyblue {color: skyblue},
+	.add {
+		text-align: center;
+		width: 500px;
+	}
 </style>
 <script>
 	module.exports=({
