@@ -17,7 +17,7 @@ const Fetch = require("./utilities/Fetch");
 Vue.component("greeting", require("./components/Greeting.vue"));
 
 // Pages
-
+import title from './pages/title.vue'
 const Welcomes = {
 	index: require("./pages/index.vue")
 };
@@ -28,7 +28,11 @@ const routes = [
 	{
 		path: "/",
 		component: Welcomes["index"]
-	}
+	},
+  {
+    path: "/title",
+    component: title
+  }
 ];
 
 const router = new VueRouter({
