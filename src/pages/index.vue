@@ -42,6 +42,10 @@ export default {
   }),
   props: {
     source: String
+  },
+   mounted() {
+   this.axios.get("https://www.google.co.jp/")
+    .then(response => {console.log(response)})
   }
 }
 </script>

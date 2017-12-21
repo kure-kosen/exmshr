@@ -28,6 +28,7 @@
   "dependencies": {
     "axios": "^0.17.1",
     "vue": "^2.4.4",
+    "vue-axios": "^2.0.2",
     "vuetify": "^0.16.9"
   },
   "devDependencies": {

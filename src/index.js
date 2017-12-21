@@ -4,7 +4,9 @@ import Vuetify from 'vuetify'
 import axios from 'axios'
 import './stylus/main.styl'
 import 'font-awesome-webpack'
+import VueAxios from 'vue-axios'
 
+Vue.use(VueAxios, axios)
 Vue.use(VueRouter)
 Vue.use(Vuetify)
 Vue.use(axios)
